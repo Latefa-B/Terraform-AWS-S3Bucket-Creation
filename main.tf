@@ -3,6 +3,8 @@ provider "aws" {
 }
 
 resource "aws_s3_bucket" "example" {
+  count = 2
   bucket = "s3-latefa"
   acl    = "private"
 }
+
